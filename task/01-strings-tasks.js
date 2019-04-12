@@ -138,7 +138,11 @@ function repeatString(value, count) {
  *   'ABABAB','BA' => 'ABAB'
  */
 function removeFirstOccurrences(str, value) {
-    throw new Error('Not implemented');
+    if (str.indexOf(value) === -1) {
+        return str;
+    }
+    return str.slice(0, str.indexOf(value)) + str.slice(str.indexOf(value) + value.length);
+    //throw new Error('Not implemented');
 }
 
 /**
@@ -153,7 +157,8 @@ function removeFirstOccurrences(str, value) {
  *   '<a>' => 'a'
  */
 function unbracketTag(str) {
-    throw new Error('Not implemented');
+    return str.replace(/\s|\<|\>/g, "");
+    //throw new Error('Not implemented');
 }
 
 
