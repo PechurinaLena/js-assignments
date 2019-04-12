@@ -88,7 +88,8 @@ function extractNameFromTemplate(value) {
  *   'cat'       => 'c'
  */
 function getFirstChar(value) {
-    throw new Error('Not implemented');
+    return value.substring(0, 1);
+    //throw new Error('Not implemented');
 }
 
 /**
