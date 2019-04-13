@@ -263,7 +263,7 @@ function isString(value) {
     } else {
         return false
     };
-    throw new Error('Not implemented');
+    // throw new Error('Not implemented');
 }
 
 
@@ -292,6 +292,7 @@ function isString(value) {
  *   'K♠' => 51
  */
 function getCardId(value) {
+
     throw new Error('Not implemented');
 }
 
