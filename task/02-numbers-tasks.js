@@ -39,6 +39,7 @@ function getRectangleArea(width, height) {
  *   0    => 0
  */
 function getCicleCircumference(radius) {
+    return Math.PI * (radius + radius);
     throw new Error('Not implemented');
 }
 
