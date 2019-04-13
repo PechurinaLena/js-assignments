@@ -218,7 +218,10 @@ function roundToPowerOfTen(num, pow) {
  *   17 => true
  */
 function isPrime(n) {
-    throw new Error('Not implemented');
+    for (var i = 2; i < n; i++)
+        if (n % i === 0) return false;
+    return n > 1;
+    // throw new Error('Not implemented');
 }
 
 /**
