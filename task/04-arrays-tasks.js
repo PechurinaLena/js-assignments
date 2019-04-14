@@ -442,6 +442,16 @@ function toStringList(arr) {
  *      { country: 'Russia',  city: 'Saint Petersburg' }
  */
 function sortCitiesArray(arr) {
+   /* function compare(a, b) {
+      if (a.country < b.city)
+         return -1;
+      if (a.country > b.city)
+         return 1;
+      return 0;
+
+   }
+
+   return arr.sort(compare);*/
    throw new Error('Not implemented');
 }
 
@@ -481,6 +491,7 @@ function getIdentityMatrix(n) {
  *     3, 3   => [ 3 ]
  */
 function getIntervalArray(start, end) {
+   return Array(end - start + 1).fill().map((_, idx) => start + idx)
    throw new Error('Not implemented');
 }
 
