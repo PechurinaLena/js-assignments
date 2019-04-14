@@ -229,6 +229,7 @@ function toCsvText(arr) {
  *   [ 10, 100, -1 ]      => [ 100, 10000, 1 ]
  */
 function toArrayOfSquares(arr) {
+   return Array.from(arr, x => x * x);
    throw new Error('Not implemented');
 }
 
@@ -263,6 +264,9 @@ function getMovingSum(arr) {
  * [ "a" ] => []
  */
 function getSecondItems(arr) {
+   return (arr.filter(function (arr, index) {
+      return index % 2 == 1;
+   }));
    throw new Error('Not implemented');
 }
 
@@ -351,6 +355,9 @@ function sortDigitNamesByNumericOrder(arr) {
  *   [ 1, 10, 100, 1000 ]  => 1111
  */
 function getItemsSum(arr) {
+   return arr.reduce(function (a, b) {
+      return a + b;
+   }, 0);
    throw new Error('Not implemented');
 }
 
@@ -367,6 +374,7 @@ function getItemsSum(arr) {
  *  [ null, undefined, NaN, false, 0, '' ]  => 6
  */
 function getFalsyValuesCount(arr) {
+
    throw new Error('Not implemented');
 }
 
@@ -385,6 +393,10 @@ function getFalsyValuesCount(arr) {
  *    [ true, 0, 1, 'true' ], true => 1
  */
 function findAllOccurences(arr, item) {
+   return arr.reduce(function (n, val) {
+      return n + (val === item);
+   }, 0);
+
    throw new Error('Not implemented');
 }
 
@@ -400,6 +412,7 @@ function findAllOccurences(arr, item) {
  *    ['rock', 'paper', 'scissors']     => 'rock,paper,scissors'
  */
 function toStringList(arr) {
+   return arr.join();
    throw new Error('Not implemented');
 }
 
