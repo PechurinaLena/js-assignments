@@ -55,6 +55,7 @@ function generateOdds(len) {
  *    [] => [] 
  */
 function doubleArray(arr) {
+   return arr.concat(arr);
    throw new Error('Not implemented');
 }
 
@@ -71,6 +72,7 @@ function doubleArray(arr) {
  *    [] => [] 
  */
 function getArrayOfPositives(arr) {
+   return arr.filter(n => n > 0);
    throw new Error('Not implemented');
 }
 
@@ -86,6 +88,9 @@ function getArrayOfPositives(arr) {
  *    [ 'cat, 'dog', 'raccon' ] => [ 'cat', 'dog', 'racoon' ]
  */
 function getArrayOfStrings(arr) {
+   return arr.filter(function (str) {
+      return typeof (str) === "string"
+   });
    throw new Error('Not implemented');
 }
 
@@ -103,7 +108,8 @@ function getArrayOfStrings(arr) {
  *    [ false, 0, NaN, '', undefined ]   => [ ]
  */
 function removeFalsyValues(arr) {
-   throw new Error('Not implemented');
+   return arr.filter(Boolean);
+   //throw new Error('Not implemented');
 }
 
 /**
