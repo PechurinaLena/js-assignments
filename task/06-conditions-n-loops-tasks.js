@@ -178,6 +178,13 @@ function isInsideCircle(circle, point) {
  *   'entente' => null
  */
 function findFirstSingleChar(str) {
+    for (var i = 0; i < str.length; i++) {
+        var c = str.charAt(i);
+        if (str.indexOf(c) == i && str.indexOf(c, i + 1) == -1) {
+            return c;
+        }
+    }
+    return null;
     throw new Error('Not implemented');
 }
 
@@ -221,6 +228,11 @@ function getIntervalString(a, b, isStartIncluded, isEndIncluded) {
  * 'noon' => 'noon'
  */
 function reverseString(str) {
+    let strn = "";
+    for (let char of str) {
+        strn = char + strn;
+    }
+    return strn;
     throw new Error('Not implemented');
 }
 
