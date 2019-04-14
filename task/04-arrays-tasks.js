@@ -507,6 +507,10 @@ function getIntervalArray(start, end) {
  *   [ 1, 1, 2, 2, 3, 3, 4, 4] => [ 1, 2, 3, 4]
  */
 function distinct(arr) {
+   function onlyUnique(value, index, item) {
+      return item.indexOf(value) === index;
+   }
+   return arr.filter(onlyUnique);
    throw new Error('Not implemented');
 }
 
