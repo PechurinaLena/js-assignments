@@ -342,7 +342,6 @@ function isBracketsBalanced(str) {
         '{': '}',
         '<': '>'
     }
-
     for (let i = 0; i < str.length; i++) {
         if (str[i] === '(' || str[i] === '{' || str[i] === '[' || str[i] === '<') {
             stack.push(str[i]);
@@ -458,6 +457,18 @@ function getCommonDirectoryPath(pathes) {
  *
  */
 function getMatrixProduct(m1, m2) {
+    var result = [];
+    for (var i = 0; i < m1.length; i++) {
+        result[i] = [];
+        for (var j = 0; j < m2[0].length; j++) {
+            var sum = 0;
+            for (var k = 0; k < m1[0].length; k++) {
+                sum += m1[i][k] * m2[k][j];
+            }
+            result[i][j] = sum;
+        }
+    }
+    return result;
     throw new Error('Not implemented');
 }
 
