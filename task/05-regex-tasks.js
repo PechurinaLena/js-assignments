@@ -31,6 +31,7 @@
  * @return {RegExp}
  */
 function getRegexForGuid() {
+
    throw new Error('Not implemented');
 }
 
@@ -121,9 +122,9 @@ function getPasswordValidator(minLength) {
 
 
 module.exports = {
-    getRegexForGuid: getRegexForGuid,
-    getRegexForPitSpot: getRegexForPitSpot,
-    getRegexForIPv4: getRegexForIPv4,
-    getRegexForSSN: getRegexForSSN,
-    getPasswordValidator: getPasswordValidator
+   getRegexForGuid: getRegexForGuid,
+   getRegexForPitSpot: getRegexForPitSpot,
+   getRegexForIPv4: getRegexForIPv4,
+   getRegexForSSN: getRegexForSSN,
+   getPasswordValidator: getPasswordValidator
 };
